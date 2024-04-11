@@ -71,6 +71,7 @@ namespace OphiussauPnpPortForward
                     var serverMapping = await device.GetSpecificMappingAsync(Protocol.TcpUpd, port);
                     if (serverMapping != null)
                         await device.DeletePortMapAsync(new Mapping(Protocol.TcpUpd, port, port, obj.Name));
+
                 }
                  
             }
